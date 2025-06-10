@@ -35,10 +35,12 @@ def generate_launch_description():
     geometry_mesh_tcp_xyz = LaunchConfiguration('geometry_mesh_tcp_xyz', default='"0 0 0"')
     geometry_mesh_tcp_rpy = LaunchConfiguration('geometry_mesh_tcp_rpy', default='"0 0 0"')
     
+    load_controller = LaunchConfiguration('load_controller', default='true')
+
     # robot gazebo launch
     # xarm_gazebo/launch/_robot_beside_table_gazebo.launch.py
     robot_gazobo_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([ThisLaunchFileDir(), '/_robot_beside_table_gazebo.launch.py']),
+        PythonLaunchDescriptionSource([ThisLaunchFileDir(), '/_robot_beside_table_gz.launch.py']),
         launch_arguments={
             'prefix': prefix,
             'hw_ns': hw_ns,
@@ -62,6 +64,7 @@ def generate_launch_description():
             'geometry_mesh_origin_rpy': geometry_mesh_origin_rpy,
             'geometry_mesh_tcp_xyz': geometry_mesh_tcp_xyz,
             'geometry_mesh_tcp_rpy': geometry_mesh_tcp_rpy,
+            'load_controller': load_controller,
         }.items(),
     )
 

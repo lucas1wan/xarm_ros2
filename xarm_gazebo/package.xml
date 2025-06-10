@@ -16,6 +16,17 @@
   <depend>xarm_description</depend>
   <depend>xarm_controller</depend>
 
+  <depend>gz_ros2_control</depend>
+  <depend>python3-numpy</depend>
+  <depend>ros_gz</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>xacro</depend>
+
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>gazebo_plugins</exec_depend>

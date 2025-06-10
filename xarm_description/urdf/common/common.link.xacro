@@ -30,7 +30,8 @@
     <visual>
       <geometry>
         <xacro:if value="${add_mesh_suffix}">
-          <mesh filename="${mesh_path}/${mesh_filename}.${mesh_suffix}"/>
+          <!-- <mesh filename="${mesh_path}/${mesh_filename}.${mesh_suffix}"/> -->
+          <mesh filename="$(find xarm_description)/meshes/${mesh_filename}.${mesh_suffix}"/>
         </xacro:if>
         <xacro:unless value="${add_mesh_suffix}">
           <xacro:if value="${other_mesh_suffix != ''}">
@@ -50,7 +51,8 @@
     <collision>
       <geometry>
         <xacro:if value="${add_mesh_suffix}">
-          <mesh filename="${mesh_path}/${mesh_filename}.${mesh_suffix}"/>
+          <!-- <mesh filename="${mesh_path}/${mesh_filename}.${mesh_suffix}"/> -->
+          <mesh filename="$(find xarm_description)/meshes/${mesh_filename}.${mesh_suffix}"/>
         </xacro:if>
         <xacro:unless value="${add_mesh_suffix}">
           <xacro:if value="${other_mesh_suffix != ''}">

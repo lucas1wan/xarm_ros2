@@ -128,7 +128,7 @@ def launch_setup(context, *args, **kwargs):
     # robot gazebo launch
     # xarm_gazebo/launch/_robot_beside_table_gazebo.launch.py
     robot_gazebo_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(PathJoinSubstitution([FindPackageShare('xarm_gazebo'), 'launch', '_robot_beside_table_gazebo.launch.py'])),
+        PythonLaunchDescriptionSource(PathJoinSubstitution([FindPackageShare('xarm_gazebo'), 'launch', '_robot_beside_table_gz.launch.py'])),
         launch_arguments={
             'dof': dof,
             'robot_type': robot_type,
@@ -136,7 +136,7 @@ def launch_setup(context, *args, **kwargs):
             'moveit_config_dump': moveit_config_dump,
             'load_controller': 'true',
             'show_rviz': 'true',
-            'no_gui_ctrl': no_gui_ctrl,
+            'no_gui_ctrl': 'false',
         }.items(),
     )
 
